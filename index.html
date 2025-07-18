@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>為替換算</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <div class="container">
+        <h1>💱 通貨換算</h1>
+        
+        <div class="input-group">
+            <label for="amount-input">金額</label>
+            <input type="text" id="amount-input" placeholder="換算したい金額を入力">
+        </div>
+
+        <div class="currency-row">
+            <div class="currency-input">
+                <label for="from-currency">換算元通貨</label>
+                <select id="from-currency">
+                    <option value="USD">USD - 米ドル</option>
+                    <option value="EUR">EUR - ユーロ</option>
+                    <option value="JPY" selected>JPY - 日本円</option>
+                    <option value="GBP">GBP - 英ポンド</option>
+                    <option value="CNY">CNY - 中国元</option>
+                    <option value="KRW">KRW - 韓国ウォン</option>
+                    <option value="AUD">AUD - 豪ドル</option>
+                    <option value="CAD">CAD - カナダドル</option>
+                    <option value="CHF">CHF - スイスフラン</option>
+                    <option value="SGD">SGD - シンガポールドル</option>
+                </select>
+            </div>
+            
+            <button class="swap-btn" id="swap-btn" title="通貨を交換">⇄</button>
+            
+            <div class="currency-input">
+                <label for="to-currency">換算先通貨</label>
+                <select id="to-currency">
+                    <option value="USD" selected>USD - 米ドル</option>
+                    <option value="EUR">EUR - ユーロ</option>
+                    <option value="JPY">JPY - 日本円</option>
+                    <option value="GBP">GBP - 英ポンド</option>
+                    <option value="CNY">CNY - 中国元</option>
+                    <option value="KRW">KRW - 韓国ウォン</option>
+                    <option value="AUD">AUD - 豪ドル</option>
+                    <option value="CAD">CAD - カナダドル</option>
+                    <option value="CHF">CHF - スイスフラン</option>
+                    <option value="SGD">SGD - シンガポールドル</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="convert-btn" id="convert-btn">変換</button>
+
+        <div class="result" id="result-div">金額を入力して変換ボタンを押してください</div>
+
+        <div class="rate-info" id="rate-info-div"></div>
+
+        <p class="last-updated" id="last-updated-p"></p>
+    </div>
+
+    <div class="performance-info" id="performance-info"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
